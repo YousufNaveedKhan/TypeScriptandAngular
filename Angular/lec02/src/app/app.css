@@ -1,0 +1,24 @@
+h2 {
+    color: red
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: orange;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
