@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.cta button {
+    padding: 8px 12px; 
+    border: none;
+    border-radius: 8px;
+    background-color: darkorange;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.cta button:hover{
+    background-color: rgb(170, 97, 7);
+}
