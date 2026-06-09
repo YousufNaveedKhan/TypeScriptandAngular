@@ -1,0 +1,26 @@
+<button (click)="showAlert()">Click Me</button>
+<br>
+<h2 (mouseover)="showText()">Hover on me</h2>
+<br>
+<button (dblclick)="typing()">Press Key Up</button>
+<br>
+<select (change)="countryChanged()">
+  <option value="Pakistan">Pakistan</option>
+  <option value="Canada">Canada</option>
+</select>
+<br>
+<button [disabled]="isDisabled">Submit</button>
+<br>
+<img [src]="imageUrl">
+<br>
+<input type="text" [value]="userName">
+<br>
+@if (isLoggedIn) {
+  <h2>Dashboard</h2>
+}
+<br>
+@for (student of students; track student) {
+  <ul>
+    <li>{{student}}</li>
+  </ul>
+}
