@@ -1,0 +1,23 @@
+<h2>Students Data</h2>
+
+<p>
+  {{student.id}}
+  -
+  {{student.name}}
+  - 
+  {{student.age}}
+</p>
+
+<br><br>
+
+<h2>Students List</h2>
+
+@for(student of students; track student.id) {
+  <p>
+  {{student.id}}
+  -
+  {{student.name}}
+  - 
+  {{student.age}}
+  </p>
+}
