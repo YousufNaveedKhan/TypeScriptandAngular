@@ -1,0 +1,48 @@
+<h2>Student Registration Form</h2>
+
+<form [formGroup]="studentForm">
+  <label>Name</label>
+  <input type="text" formControlName="name">
+  @if(studentForm.get('name')?.touched && studentForm.get('name')?.invalid) {
+  <p>Name is required and must contain 3 characters</p>
+  }
+  <br><br>
+
+  <label>Email</label>
+  <input type="email" formControlName="email">
+  @if(studentForm.get('email')?.touched && studentForm.get('email')?.invalid) {
+  <p>Email is required</p>
+  }
+  <br><br>
+
+  <label>Age</label>
+  <input type="number" formControlName="age">
+  @if(studentForm.get('age')?.touched && studentForm.get('age')?.invalid) {
+  <p>Age is required and must be above 18</p>
+  }
+  <br><br>
+
+  <button (click)="saveStudent()" [disabled]="studentForm.invalid">Save Student</button>
+
+</form>
+
+<br><br><br>
+
+<table cellpadding="10">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(student of students; track student.index) {
+    <tr>
+      <td>{{student.name}}</td>
+      <td>{{student.email}}</td>
+      <td>{{student.age}}</td>
+    </tr>
+    }
+  </tbody>
+</table>
